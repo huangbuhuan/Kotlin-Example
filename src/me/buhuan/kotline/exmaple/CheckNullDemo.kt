@@ -12,4 +12,9 @@ fun parseInt(str: String): Int? {
 fun main(args: Array<String>) {
 	println(parseInt("1"))
 	println(parseInt("a"))
+
+	val listWithNulls: List<String?> = listOf("A", "B", null)
+	for (item in listWithNulls) {
+		item?.let { println(it) }
+	}
 }
