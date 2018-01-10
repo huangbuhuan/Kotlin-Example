@@ -12,3 +12,11 @@ fun printSum(a: Int, b: Int) {
 	println("sum of $a and $b is ${a + b}")
 }
 
+fun foo(a: Int = 0, b: Int,  qux: () -> Unit) {
+
+}
+
+fun main(args: Array<String>) {
+	foo(1, 2) { println("hello") }
+}
+
