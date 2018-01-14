@@ -16,6 +16,9 @@ fun foo(a: Int = 0, b: Int,  qux: () -> Unit) {
 
 }
 
+tailrec fun findFixPoint(x: Double = 1.0): Double =
+		if (x == Math.cos(x)) x else findFixPoint(Math.cos(x))
+
 fun main(args: Array<String>) {
 	foo(1, 2) { println("hello") }
 }
